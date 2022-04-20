@@ -133,18 +133,15 @@ end
 		  8'b11101110:keypad_value <= 4'h7;
 		  endcase                                     // get keypad_value
 		  
-		  if( keypad_value == 4'hf)                   
-        begin    
-		     if(rnd == 0 && clicked[0] == 0)
-			  begin
-                score = score + 1;
-		          clicked[0] = 1;
-			  end 
+		  if( keypad_value == 4'hf)   begin    
+		      if(rnd == 0 && clicked[0] == 0) begin
+                      	    score = score + 1;
+		            clicked[0] = 1;
+		      end 
 		  end	  
 		  else
-		      	 clicked[0] = 0;                    // if position is the smae  than socre++ one time
-		  if( keypad_value == 4'he)
-        begin    
+		       clicked[0] = 0;                    // if position is the smae  than socre++ one time
+		  if( keypad_value == 4'he)  begin    
 		     if(rnd == 1 && clicked[1] == 0)
 			  begin
                 score = score + 1;
